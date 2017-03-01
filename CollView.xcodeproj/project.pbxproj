@@ -12,9 +12,14 @@
 		E36F5EF61E65C71500170C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36F5EF41E65C71500170C4A /* Main.storyboard */; };
 		E36F5EF81E65C71500170C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36F5EF71E65C71500170C4A /* Assets.xcassets */; };
 		E36F5EFB1E65C71500170C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36F5EF91E65C71500170C4A /* LaunchScreen.storyboard */; };
+		E36F5F031E65CA3500170C4A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F5F021E65CA3500170C4A /* Cell.swift */; };
+		E36F5F051E65D21000170C4A /* RedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36F5F041E65D21000170C4A /* RedCell.swift */; };
+		FEE23CE8046F39737C810678 /* Pods_CollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400FD8A70C7D2B3CA4C56DF /* Pods_CollView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1E3B66831BA174E6806839 /* Pods-CollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollView/Pods-CollView.release.xcconfig"; sourceTree = "<group>"; };
+		8400FD8A70C7D2B3CA4C56DF /* Pods_CollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36F5EED1E65C71500170C4A /* CollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36F5EF01E65C71500170C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E36F5EF21E65C71500170C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		E36F5EF71E65C71500170C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36F5EFA1E65C71500170C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E36F5EFC1E65C71500170C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E36F5F021E65CA3500170C4A /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		E36F5F041E65D21000170C4A /* RedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedCell.swift; sourceTree = "<group>"; };
+		ECAC0E2E3572D6741C03068E /* Pods-CollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollView/Pods-CollView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE23CE8046F39737C810678 /* Pods_CollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161A10C222754E6578A12FCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8400FD8A70C7D2B3CA4C56DF /* Pods_CollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEBDC1C67410D220BF95949D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECAC0E2E3572D6741C03068E /* Pods-CollView.debug.xcconfig */,
+				1A1E3B66831BA174E6806839 /* Pods-CollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E36F5EE41E65C71500170C4A = {
 			isa = PBXGroup;
 			children = (
 				E36F5EEF1E65C71500170C4A /* CollView */,
 				E36F5EEE1E65C71500170C4A /* Products */,
+				CEBDC1C67410D220BF95949D /* Pods */,
+				161A10C222754E6578A12FCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,8 @@
 				E36F5EF71E65C71500170C4A /* Assets.xcassets */,
 				E36F5EF91E65C71500170C4A /* LaunchScreen.storyboard */,
 				E36F5EFC1E65C71500170C4A /* Info.plist */,
+				E36F5F021E65CA3500170C4A /* Cell.swift */,
+				E36F5F041E65D21000170C4A /* RedCell.swift */,
 			);
 			path = CollView;
 			sourceTree = "<group>";
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E36F5EFF1E65C71500170C4A /* Build configuration list for PBXNativeTarget "CollView" */;
 			buildPhases = (
+				798515E424DE4647F75B023B /* [CP] Check Pods Manifest.lock */,
 				E36F5EE91E65C71500170C4A /* Sources */,
 				E36F5EEA1E65C71500170C4A /* Frameworks */,
 				E36F5EEB1E65C71500170C4A /* Resources */,
+				00793C9008C1EEFF6013E121 /* [CP] Embed Pods Frameworks */,
+				51FAD4028557D142F81D1A65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +165,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00793C9008C1EEFF6013E121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollView/Pods-CollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51FAD4028557D142F81D1A65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollView/Pods-CollView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		798515E424DE4647F75B023B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E36F5EE91E65C71500170C4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +220,8 @@
 			files = (
 				E36F5EF31E65C71500170C4A /* ViewController.swift in Sources */,
 				E36F5EF11E65C71500170C4A /* AppDelegate.swift in Sources */,
+				E36F5F031E65CA3500170C4A /* Cell.swift in Sources */,
+				E36F5F051E65D21000170C4A /* RedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +340,7 @@
 		};
 		E36F5F001E65C71500170C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECAC0E2E3572D6741C03068E /* Pods-CollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23994V38H4;
@@ -270,6 +354,7 @@
 		};
 		E36F5F011E65C71500170C4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1E3B66831BA174E6806839 /* Pods-CollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23994V38H4;
@@ -300,6 +385,7 @@
 				E36F5F011E65C71500170C4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
